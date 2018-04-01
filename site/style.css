@@ -1,0 +1,45 @@
+body {
+    font-family: sans-serif;
+}
+
+.polygon {
+    stroke: #000;
+    stroke-width: 1px;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 2px;
+    text-shadow: 0 0 4px white;
+    pointer-events: none;
+    font: 12px sans-serif;
+    background-color: #fff;
+}
+
+.label {
+    stroke-width: 1px;
+    stroke: #d3d3d3;
+    cursor: pointer;
+
+}
+
+.label-text {
+    fill: #d3d3d3;
+    stroke: none;
+    cursor: pointer;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+}
+
+svg {
+    display: block;
+    margin: auto;
+}
+
+.column-left{ float: left; width: 33%; }
+.column-right{ float: right; width: 33%; }
+.column-center{ display: inline-block; width: 33%; }

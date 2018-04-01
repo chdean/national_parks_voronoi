@@ -1,0 +1,1686 @@
+<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
+<qgis version="3.0.1-Girona" projectname="">
+  <title></title>
+  <autotransaction active="0"/>
+  <evaluateDefaultValues active="0"/>
+  <trust active="0"/>
+  <projectCrs>
+    <spatialrefsys>
+      <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+      <srsid>3452</srsid>
+      <srid>4326</srid>
+      <authid>EPSG:4326</authid>
+      <description>WGS 84</description>
+      <projectionacronym>longlat</projectionacronym>
+      <ellipsoidacronym>WGS84</ellipsoidacronym>
+      <geographicflag>true</geographicflag>
+    </spatialrefsys>
+  </projectCrs>
+  <layer-tree-group>
+    <customproperties/>
+    <layer-tree-layer source="./nps_voronoi.gpkg|layername=voronoi" name="Voronoi polygons" id="ogr_dbname___home_chd_Dropbox_national_parks_voronoi_nps_voronoi_gpkg__table__voronoi___geom__sql__80db4914_33ee_423c_bd72_ef1dd9aff30b" providerKey="ogr" checked="Qt::Checked" expanded="1">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer source="./nps_centroids.gpkg|layername=nps_centroids" name="nps_centroids" id="nps_centroids_c6e91138_dd75_4a72_bd0e_643a483f4a8e" providerKey="ogr" checked="Qt::Checked" expanded="1">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer source="Point?crs=EPSG:4269&amp;field=GIS_LOC_ID:string(128)&amp;field=UNIT_CODE:string(10)&amp;field=GROUP_CODE:string(10)&amp;field=UNIT_NAME:string(254)&amp;field=UNIT_TYPE:string(254)&amp;field=META_MIDF:string(128)&amp;field=LANDS_CODE:string(20)&amp;field=DATE_EDIT:date(10)&amp;field=GIS_NOTES:string(254)&amp;uid={6b59e0a1-2057-43f6-8c06-3aa3afe32e7b}" name="Centroids" id="output_0ab6daaa_5fbc_49dc_81be_ec0a714c5124" providerKey="memory" checked="Qt::Unchecked" expanded="1">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer source="MultiPolygon?crs=EPSG:4269&amp;field=GIS_LOC_ID:string(128)&amp;field=UNIT_CODE:string(10)&amp;field=GROUP_CODE:string(10)&amp;field=UNIT_NAME:string(254)&amp;field=UNIT_TYPE:string(254)&amp;field=META_MIDF:string(128)&amp;field=LANDS_CODE:string(20)&amp;field=DATE_EDIT:date(10)&amp;field=GIS_NOTES:string(254)&amp;uid={af48532b-66fa-4b95-851a-030f63266bd9}" name="Dissolved" id="output_59477e45_f310_49c3_a75b_e747a874302e" providerKey="memory" checked="Qt::Checked" expanded="1">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer source="/vsizip/../gis_data/nps_boundary.zip" name="nps_boundary" id="nps_boundary_13f67a1c_7c4a_40bc_a59f_489537ad915e" providerKey="ogr" checked="Qt::Unchecked" expanded="1">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer source="/vsizip/../gis_data/cb_2016_us_state_20m.zip/cb_2016_us_state_20m.shp" name="cb_2016_us_state_20m" id="cb_2016_us_state_20m_a3a3575a_e2b8_45cb_98b7_7760924f4f36" providerKey="ogr" checked="Qt::Checked" expanded="1">
+      <customproperties/>
+    </layer-tree-layer>
+    <custom-order enabled="0">
+      <item>cb_2016_us_state_20m_a3a3575a_e2b8_45cb_98b7_7760924f4f36</item>
+      <item>nps_boundary_13f67a1c_7c4a_40bc_a59f_489537ad915e</item>
+      <item>output_59477e45_f310_49c3_a75b_e747a874302e</item>
+      <item>output_0ab6daaa_5fbc_49dc_81be_ec0a714c5124</item>
+      <item>nps_centroids_c6e91138_dd75_4a72_bd0e_643a483f4a8e</item>
+      <item>ogr_dbname___home_chd_Dropbox_national_parks_voronoi_nps_voronoi_gpkg__table__voronoi___geom__sql__80db4914_33ee_423c_bd72_ef1dd9aff30b</item>
+    </custom-order>
+  </layer-tree-group>
+  <snapping-settings tolerance="12" intersection-snapping="0" enabled="0" unit="1" mode="2" type="1">
+    <individual-layer-settings>
+      <layer-setting tolerance="12" units="1" id="nps_boundary_13f67a1c_7c4a_40bc_a59f_489537ad915e" enabled="1" type="2"/>
+      <layer-setting tolerance="12" units="1" id="output_59477e45_f310_49c3_a75b_e747a874302e" enabled="1" type="2"/>
+      <layer-setting tolerance="12" units="1" id="nps_centroids_c6e91138_dd75_4a72_bd0e_643a483f4a8e" enabled="1" type="2"/>
+      <layer-setting tolerance="12" units="1" id="output_0ab6daaa_5fbc_49dc_81be_ec0a714c5124" enabled="1" type="2"/>
+      <layer-setting tolerance="12" units="1" id="cb_2016_us_state_20m_a3a3575a_e2b8_45cb_98b7_7760924f4f36" enabled="1" type="1"/>
+      <layer-setting tolerance="12" units="1" id="ogr_dbname___home_chd_Dropbox_national_parks_voronoi_nps_voronoi_gpkg__table__voronoi___geom__sql__80db4914_33ee_423c_bd72_ef1dd9aff30b" enabled="1" type="2"/>
+    </individual-layer-settings>
+  </snapping-settings>
+  <relations/>
+  <mapcanvas name="theMapCanvas" annotationsVisible="1">
+    <units>degrees</units>
+    <extent>
+      <xmin>-170.1761650766155185</xmin>
+      <ymin>49.65194660986567499</ymin>
+      <xmax>-117.79059058466549459</xmax>
+      <ymax>76.04198067950692064</ymax>
+    </extent>
+    <rotation>0</rotation>
+    <destinationsrs>
+      <spatialrefsys>
+        <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+        <srsid>3452</srsid>
+        <srid>4326</srid>
+        <authid>EPSG:4326</authid>
+        <description>WGS 84</description>
+        <projectionacronym>longlat</projectionacronym>
+        <ellipsoidacronym>WGS84</ellipsoidacronym>
+        <geographicflag>true</geographicflag>
+      </spatialrefsys>
+    </destinationsrs>
+    <rendermaptile>0</rendermaptile>
+  </mapcanvas>
+  <legend updateDrawingOrder="true">
+    <legendlayer drawingOrder="-1" name="Voronoi polygons" open="true" checked="Qt::Checked" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile visible="1" isInOverview="0" layerid="ogr_dbname___home_chd_Dropbox_national_parks_voronoi_nps_voronoi_gpkg__table__voronoi___geom__sql__80db4914_33ee_423c_bd72_ef1dd9aff30b"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer drawingOrder="-1" name="nps_centroids" open="true" checked="Qt::Checked" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile visible="1" isInOverview="0" layerid="nps_centroids_c6e91138_dd75_4a72_bd0e_643a483f4a8e"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer drawingOrder="-1" name="Centroids" open="true" checked="Qt::Unchecked" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile visible="0" isInOverview="0" layerid="output_0ab6daaa_5fbc_49dc_81be_ec0a714c5124"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer drawingOrder="-1" name="Dissolved" open="true" checked="Qt::Checked" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile visible="1" isInOverview="0" layerid="output_59477e45_f310_49c3_a75b_e747a874302e"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer drawingOrder="-1" name="nps_boundary" open="true" checked="Qt::Unchecked" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile visible="0" isInOverview="0" layerid="nps_boundary_13f67a1c_7c4a_40bc_a59f_489537ad915e"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer drawingOrder="-1" name="cb_2016_us_state_20m" open="true" checked="Qt::Checked" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile visible="1" isInOverview="0" layerid="cb_2016_us_state_20m_a3a3575a_e2b8_45cb_98b7_7760924f4f36"/>
+      </filegroup>
+    </legendlayer>
+  </legend>
+  <mapViewDocks/>
+  <mapViewDocks3D/>
+  <projectlayers>
+    <maplayer minScale="1e+8" readOnly="0" maxScale="0" refreshOnNotifyEnabled="0" geometry="Polygon" simplifyDrawingTol="1" refreshOnNotifyMessage="" simplifyMaxScale="1" autoRefreshTime="0" simplifyDrawingHints="1" autoRefreshEnabled="0" labelsEnabled="0" simplifyAlgorithm="0" simplifyLocal="1" type="vector" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>-179.17426499999999123</xmin>
+        <ymin>17.9137689999999985</ymin>
+        <xmax>179.77392199999999889</xmax>
+        <ymax>71.35256099999999435</ymax>
+      </extent>
+      <id>cb_2016_us_state_20m_a3a3575a_e2b8_45cb_98b7_7760924f4f36</id>
+      <datasource>/vsizip/../gis_data/cb_2016_us_state_20m.zip/cb_2016_us_state_20m.shp</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>cb_2016_us_state_20m</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +no_defs</proj4>
+          <srsid>3401</srsid>
+          <srid>4269</srid>
+          <authid>EPSG:4269</authid>
+          <description>NAD83</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>true</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent>
+          <spatial minx="0" maxx="0" miny="0" maxy="0" minz="0" maxz="0" dimensions="2" crs=""/>
+          <temporal>
+            <period>
+              <start></start>
+              <end></end>
+            </period>
+          </temporal>
+        </extent>
+        <contact>
+          <name></name>
+          <organization></organization>
+          <position></position>
+          <voice></voice>
+          <fax></fax>
+          <email></email>
+          <role></role>
+        </contact>
+        <links/>
+      </resourceMetadata>
+      <provider encoding="UTF-8">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <renderer-v2 enableorderby="0" forceraster="0" type="singleSymbol" symbollevels="0">
+        <symbols>
+          <symbol name="0" clip_to_extent="1" alpha="1" type="fill">
+            <layer class="SimpleFill" enabled="1" locked="0" pass="0">
+              <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
+              <prop v="220,220,220,255" k="color"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="35,35,35,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0.26" k="outline_width"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="solid" k="style"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option value="" name="name" type="QString"/>
+                  <Option name="properties"/>
+                  <Option value="collection" name="type" type="QString"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties>
+        <property value="0" key="embeddedWidgets/count"/>
+        <property key="variableNames"/>
+        <property key="variableValues"/>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <SingleCategoryDiagramRenderer diagramType="Histogram" attributeLegend="1">
+        <DiagramCategory minimumSize="0" penWidth="0" height="15" minScaleDenominator="0" lineSizeType="MM" width="15" diagramOrientation="Up" maxScaleDenominator="1e+8" barWidth="5" backgroundColor="#ffffff" labelPlacementMethod="XHeight" enabled="0" backgroundAlpha="255" penColor="#000000" penAlpha="255" lineSizeScale="3x:0,0,0,0,0,0" rotationOffset="270" sizeScale="3x:0,0,0,0,0,0" sizeType="MM" opacity="1" scaleBasedVisibility="0" scaleDependency="Area">
+          <fontProperties style="" description="Noto Sans,9,-1,5,50,0,0,0,0,0"/>
+          <attribute color="#000000" label="" field=""/>
+        </DiagramCategory>
+      </SingleCategoryDiagramRenderer>
+      <DiagramLayerSettings placement="0" dist="0" linePlacementFlags="18" zIndex="0" showAll="1" priority="0" obstacle="0">
+        <properties>
+          <Option type="Map">
+            <Option value="" name="name" type="QString"/>
+            <Option name="properties"/>
+            <Option value="collection" name="type" type="QString"/>
+          </Option>
+        </properties>
+      </DiagramLayerSettings>
+      <fieldConfiguration>
+        <field name="STATEFP">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="STATENS">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="AFFGEOID">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="GEOID">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="STUSPS">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="NAME">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="LSAD">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="ALAND">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="AWATER">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" name="" field="STATEFP"/>
+        <alias index="1" name="" field="STATENS"/>
+        <alias index="2" name="" field="AFFGEOID"/>
+        <alias index="3" name="" field="GEOID"/>
+        <alias index="4" name="" field="STUSPS"/>
+        <alias index="5" name="" field="NAME"/>
+        <alias index="6" name="" field="LSAD"/>
+        <alias index="7" name="" field="ALAND"/>
+        <alias index="8" name="" field="AWATER"/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default applyOnUpdate="0" expression="" field="STATEFP"/>
+        <default applyOnUpdate="0" expression="" field="STATENS"/>
+        <default applyOnUpdate="0" expression="" field="AFFGEOID"/>
+        <default applyOnUpdate="0" expression="" field="GEOID"/>
+        <default applyOnUpdate="0" expression="" field="STUSPS"/>
+        <default applyOnUpdate="0" expression="" field="NAME"/>
+        <default applyOnUpdate="0" expression="" field="LSAD"/>
+        <default applyOnUpdate="0" expression="" field="ALAND"/>
+        <default applyOnUpdate="0" expression="" field="AWATER"/>
+      </defaults>
+      <constraints>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="STATEFP"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="STATENS"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="AFFGEOID"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="GEOID"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="STUSPS"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="NAME"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="LSAD"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="ALAND"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="AWATER"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint desc="" exp="" field="STATEFP"/>
+        <constraint desc="" exp="" field="STATENS"/>
+        <constraint desc="" exp="" field="AFFGEOID"/>
+        <constraint desc="" exp="" field="GEOID"/>
+        <constraint desc="" exp="" field="STUSPS"/>
+        <constraint desc="" exp="" field="NAME"/>
+        <constraint desc="" exp="" field="LSAD"/>
+        <constraint desc="" exp="" field="ALAND"/>
+        <constraint desc="" exp="" field="AWATER"/>
+      </constraintExpressions>
+      <attributeactions>
+        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+      </attributeactions>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns>
+          <column name="STATEFP" width="-1" hidden="0" type="field"/>
+          <column name="STATENS" width="-1" hidden="0" type="field"/>
+          <column name="AFFGEOID" width="-1" hidden="0" type="field"/>
+          <column name="GEOID" width="-1" hidden="0" type="field"/>
+          <column name="STUSPS" width="-1" hidden="0" type="field"/>
+          <column name="NAME" width="-1" hidden="0" type="field"/>
+          <column name="LSAD" width="-1" hidden="0" type="field"/>
+          <column name="ALAND" width="-1" hidden="0" type="field"/>
+          <column name="AWATER" width="-1" hidden="0" type="field"/>
+          <column width="-1" hidden="1" type="actions"/>
+        </columns>
+      </attributetableconfig>
+      <editform>.</editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+QGIS forms can have a Python function that is called when the form is
+opened.
+
+Use this function to add extra logic to your forms.
+
+Enter the name of the function in the "Python Init function"
+field.
+An example follows:
+"""
+from qgis.PyQt.QtWidgets import QWidget
+
+def my_form_open(dialog, layer, feature):
+	geom = feature.geometry()
+	control = dialog.findChild(QWidget, "MyLineEdit")
+]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable>
+        <field name="AFFGEOID" editable="1"/>
+        <field name="ALAND" editable="1"/>
+        <field name="AWATER" editable="1"/>
+        <field name="GEOID" editable="1"/>
+        <field name="LSAD" editable="1"/>
+        <field name="NAME" editable="1"/>
+        <field name="STATEFP" editable="1"/>
+        <field name="STATENS" editable="1"/>
+        <field name="STUSPS" editable="1"/>
+      </editable>
+      <labelOnTop>
+        <field name="AFFGEOID" labelOnTop="0"/>
+        <field name="ALAND" labelOnTop="0"/>
+        <field name="AWATER" labelOnTop="0"/>
+        <field name="GEOID" labelOnTop="0"/>
+        <field name="LSAD" labelOnTop="0"/>
+        <field name="NAME" labelOnTop="0"/>
+        <field name="STATEFP" labelOnTop="0"/>
+        <field name="STATENS" labelOnTop="0"/>
+        <field name="STUSPS" labelOnTop="0"/>
+      </labelOnTop>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <expressionfields/>
+      <previewExpression>AFFGEOID</previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer minScale="1e+8" readOnly="0" maxScale="0" refreshOnNotifyEnabled="0" geometry="Polygon" simplifyDrawingTol="1" refreshOnNotifyMessage="" simplifyMaxScale="1" autoRefreshTime="0" simplifyDrawingHints="1" autoRefreshEnabled="0" labelsEnabled="0" simplifyAlgorithm="0" simplifyLocal="1" type="vector" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>-170.72848129003983786</xmin>
+        <ymin>-14.28558205788383617</ymin>
+        <xmax>145.72838669750606755</xmax>
+        <ymax>68.65538485848681205</ymax>
+      </extent>
+      <id>nps_boundary_13f67a1c_7c4a_40bc_a59f_489537ad915e</id>
+      <datasource>/vsizip/../gis_data/nps_boundary.zip</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>nps_boundary</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +no_defs</proj4>
+          <srsid>3401</srsid>
+          <srid>4269</srid>
+          <authid>EPSG:4269</authid>
+          <description>NAD83</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <provider encoding="UTF-8">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <renderer-v2 enableorderby="0" forceraster="0" type="singleSymbol" symbollevels="0">
+        <symbols>
+          <symbol name="0" clip_to_extent="1" alpha="1" type="fill">
+            <layer class="SimpleFill" enabled="1" locked="0" pass="0">
+              <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
+              <prop v="171,217,3,255" k="color"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="35,35,35,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0.26" k="outline_width"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="solid" k="style"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option value="" name="name" type="QString"/>
+                  <Option name="properties"/>
+                  <Option value="collection" name="type" type="QString"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties/>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <fieldConfiguration>
+        <field name="GIS_LOC_ID">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="UNIT_CODE">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="GROUP_CODE">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="UNIT_NAME">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="UNIT_TYPE">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="META_MIDF">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="LANDS_CODE">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="DATE_EDIT">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="GIS_NOTES">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" name="" field="GIS_LOC_ID"/>
+        <alias index="1" name="" field="UNIT_CODE"/>
+        <alias index="2" name="" field="GROUP_CODE"/>
+        <alias index="3" name="" field="UNIT_NAME"/>
+        <alias index="4" name="" field="UNIT_TYPE"/>
+        <alias index="5" name="" field="META_MIDF"/>
+        <alias index="6" name="" field="LANDS_CODE"/>
+        <alias index="7" name="" field="DATE_EDIT"/>
+        <alias index="8" name="" field="GIS_NOTES"/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default applyOnUpdate="0" expression="" field="GIS_LOC_ID"/>
+        <default applyOnUpdate="0" expression="" field="UNIT_CODE"/>
+        <default applyOnUpdate="0" expression="" field="GROUP_CODE"/>
+        <default applyOnUpdate="0" expression="" field="UNIT_NAME"/>
+        <default applyOnUpdate="0" expression="" field="UNIT_TYPE"/>
+        <default applyOnUpdate="0" expression="" field="META_MIDF"/>
+        <default applyOnUpdate="0" expression="" field="LANDS_CODE"/>
+        <default applyOnUpdate="0" expression="" field="DATE_EDIT"/>
+        <default applyOnUpdate="0" expression="" field="GIS_NOTES"/>
+      </defaults>
+      <constraints>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="GIS_LOC_ID"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="UNIT_CODE"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="GROUP_CODE"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="UNIT_NAME"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="UNIT_TYPE"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="META_MIDF"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="LANDS_CODE"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="DATE_EDIT"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="GIS_NOTES"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint desc="" exp="" field="GIS_LOC_ID"/>
+        <constraint desc="" exp="" field="UNIT_CODE"/>
+        <constraint desc="" exp="" field="GROUP_CODE"/>
+        <constraint desc="" exp="" field="UNIT_NAME"/>
+        <constraint desc="" exp="" field="UNIT_TYPE"/>
+        <constraint desc="" exp="" field="META_MIDF"/>
+        <constraint desc="" exp="" field="LANDS_CODE"/>
+        <constraint desc="" exp="" field="DATE_EDIT"/>
+        <constraint desc="" exp="" field="GIS_NOTES"/>
+      </constraintExpressions>
+      <attributeactions>
+        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+      </attributeactions>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
+      <editform></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable/>
+      <labelOnTop/>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <expressionfields/>
+      <previewExpression></previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer minScale="1e+8" readOnly="0" maxScale="0" refreshOnNotifyEnabled="0" geometry="Point" simplifyDrawingTol="1" refreshOnNotifyMessage="" simplifyMaxScale="1" autoRefreshTime="0" simplifyDrawingHints="1" autoRefreshEnabled="0" labelsEnabled="0" simplifyAlgorithm="0" simplifyLocal="1" type="vector" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>-164.40399999999999636</xmin>
+        <ymin>17.73740000000000094</ymin>
+        <xmax>-64.62220000000000653</xmax>
+        <ymax>68.004099999999994</ymax>
+      </extent>
+      <id>nps_centroids_c6e91138_dd75_4a72_bd0e_643a483f4a8e</id>
+      <datasource>./nps_centroids.gpkg|layername=nps_centroids</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>nps_centroids</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +no_defs</proj4>
+          <srsid>3401</srsid>
+          <srid>4269</srid>
+          <authid>EPSG:4269</authid>
+          <description>NAD83</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <provider encoding="UTF-8">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <renderer-v2 enableorderby="0" forceraster="0" type="singleSymbol" symbollevels="0">
+        <symbols>
+          <symbol name="0" clip_to_extent="1" alpha="1" type="marker">
+            <layer class="SimpleMarker" enabled="1" locked="0" pass="0">
+              <prop v="0" k="angle"/>
+              <prop v="228,244,0,255" k="color"/>
+              <prop v="1" k="horizontal_anchor_point"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="circle" k="name"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="35,35,35,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0" k="outline_width"/>
+              <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="diameter" k="scale_method"/>
+              <prop v="2" k="size"/>
+              <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
+              <prop v="MM" k="size_unit"/>
+              <prop v="1" k="vertical_anchor_point"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option value="" name="name" type="QString"/>
+                  <Option name="properties"/>
+                  <Option value="collection" name="type" type="QString"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties/>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <fieldConfiguration>
+        <field name="fid">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="GIS_LOC_ID">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="UNIT_CODE">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="GROUP_CODE">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="UNIT_NAME">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="UNIT_TYPE">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="META_MIDF">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="LANDS_CODE">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="DATE_EDIT">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="GIS_NOTES">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" name="" field="fid"/>
+        <alias index="1" name="" field="GIS_LOC_ID"/>
+        <alias index="2" name="" field="UNIT_CODE"/>
+        <alias index="3" name="" field="GROUP_CODE"/>
+        <alias index="4" name="" field="UNIT_NAME"/>
+        <alias index="5" name="" field="UNIT_TYPE"/>
+        <alias index="6" name="" field="META_MIDF"/>
+        <alias index="7" name="" field="LANDS_CODE"/>
+        <alias index="8" name="" field="DATE_EDIT"/>
+        <alias index="9" name="" field="GIS_NOTES"/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default applyOnUpdate="0" expression="" field="fid"/>
+        <default applyOnUpdate="0" expression="" field="GIS_LOC_ID"/>
+        <default applyOnUpdate="0" expression="" field="UNIT_CODE"/>
+        <default applyOnUpdate="0" expression="" field="GROUP_CODE"/>
+        <default applyOnUpdate="0" expression="" field="UNIT_NAME"/>
+        <default applyOnUpdate="0" expression="" field="UNIT_TYPE"/>
+        <default applyOnUpdate="0" expression="" field="META_MIDF"/>
+        <default applyOnUpdate="0" expression="" field="LANDS_CODE"/>
+        <default applyOnUpdate="0" expression="" field="DATE_EDIT"/>
+        <default applyOnUpdate="0" expression="" field="GIS_NOTES"/>
+      </defaults>
+      <constraints>
+        <constraint constraints="3" unique_strength="1" notnull_strength="1" exp_strength="0" field="fid"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="GIS_LOC_ID"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="UNIT_CODE"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="GROUP_CODE"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="UNIT_NAME"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="UNIT_TYPE"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="META_MIDF"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="LANDS_CODE"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="DATE_EDIT"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="GIS_NOTES"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint desc="" exp="" field="fid"/>
+        <constraint desc="" exp="" field="GIS_LOC_ID"/>
+        <constraint desc="" exp="" field="UNIT_CODE"/>
+        <constraint desc="" exp="" field="GROUP_CODE"/>
+        <constraint desc="" exp="" field="UNIT_NAME"/>
+        <constraint desc="" exp="" field="UNIT_TYPE"/>
+        <constraint desc="" exp="" field="META_MIDF"/>
+        <constraint desc="" exp="" field="LANDS_CODE"/>
+        <constraint desc="" exp="" field="DATE_EDIT"/>
+        <constraint desc="" exp="" field="GIS_NOTES"/>
+      </constraintExpressions>
+      <attributeactions>
+        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+      </attributeactions>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
+      <editform></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable/>
+      <labelOnTop/>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <expressionfields/>
+      <previewExpression></previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer minScale="1e+8" readOnly="0" maxScale="0" refreshOnNotifyEnabled="0" geometry="Polygon" simplifyDrawingTol="1" refreshOnNotifyMessage="" simplifyMaxScale="1" autoRefreshTime="0" simplifyDrawingHints="1" autoRefreshEnabled="0" labelsEnabled="0" simplifyAlgorithm="0" simplifyLocal="1" type="vector" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>-164.40399999999999636</xmin>
+        <ymin>17.73740000000000094</ymin>
+        <xmax>-64.62220000000000653</xmax>
+        <ymax>68.004099999999994</ymax>
+      </extent>
+      <id>ogr_dbname___home_chd_Dropbox_national_parks_voronoi_nps_voronoi_gpkg__table__voronoi___geom__sql__80db4914_33ee_423c_bd72_ef1dd9aff30b</id>
+      <datasource>./nps_voronoi.gpkg|layername=voronoi</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>Voronoi polygons</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +no_defs</proj4>
+          <srsid>3401</srsid>
+          <srid>4269</srid>
+          <authid>EPSG:4269</authid>
+          <description>NAD83</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <provider encoding="UTF-8">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <renderer-v2 enableorderby="0" forceraster="0" type="singleSymbol" symbollevels="0">
+        <symbols>
+          <symbol name="0" clip_to_extent="1" alpha="1" type="fill">
+            <layer class="SimpleFill" enabled="1" locked="0" pass="0">
+              <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
+              <prop v="64,44,151,255" k="color"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="35,35,35,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0.26" k="outline_width"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="solid" k="style"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option value="" name="name" type="QString"/>
+                  <Option name="properties"/>
+                  <Option value="collection" name="type" type="QString"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties/>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <fieldConfiguration>
+        <field name="fid">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="GIS_LOC_ID">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="UNIT_CODE">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="GROUP_CODE">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="UNIT_NAME">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="UNIT_TYPE">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="META_MIDF">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="LANDS_CODE">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="DATE_EDIT">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="GIS_NOTES">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" name="" field="fid"/>
+        <alias index="1" name="" field="GIS_LOC_ID"/>
+        <alias index="2" name="" field="UNIT_CODE"/>
+        <alias index="3" name="" field="GROUP_CODE"/>
+        <alias index="4" name="" field="UNIT_NAME"/>
+        <alias index="5" name="" field="UNIT_TYPE"/>
+        <alias index="6" name="" field="META_MIDF"/>
+        <alias index="7" name="" field="LANDS_CODE"/>
+        <alias index="8" name="" field="DATE_EDIT"/>
+        <alias index="9" name="" field="GIS_NOTES"/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default applyOnUpdate="0" expression="" field="fid"/>
+        <default applyOnUpdate="0" expression="" field="GIS_LOC_ID"/>
+        <default applyOnUpdate="0" expression="" field="UNIT_CODE"/>
+        <default applyOnUpdate="0" expression="" field="GROUP_CODE"/>
+        <default applyOnUpdate="0" expression="" field="UNIT_NAME"/>
+        <default applyOnUpdate="0" expression="" field="UNIT_TYPE"/>
+        <default applyOnUpdate="0" expression="" field="META_MIDF"/>
+        <default applyOnUpdate="0" expression="" field="LANDS_CODE"/>
+        <default applyOnUpdate="0" expression="" field="DATE_EDIT"/>
+        <default applyOnUpdate="0" expression="" field="GIS_NOTES"/>
+      </defaults>
+      <constraints>
+        <constraint constraints="3" unique_strength="1" notnull_strength="1" exp_strength="0" field="fid"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="GIS_LOC_ID"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="UNIT_CODE"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="GROUP_CODE"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="UNIT_NAME"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="UNIT_TYPE"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="META_MIDF"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="LANDS_CODE"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="DATE_EDIT"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="GIS_NOTES"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint desc="" exp="" field="fid"/>
+        <constraint desc="" exp="" field="GIS_LOC_ID"/>
+        <constraint desc="" exp="" field="UNIT_CODE"/>
+        <constraint desc="" exp="" field="GROUP_CODE"/>
+        <constraint desc="" exp="" field="UNIT_NAME"/>
+        <constraint desc="" exp="" field="UNIT_TYPE"/>
+        <constraint desc="" exp="" field="META_MIDF"/>
+        <constraint desc="" exp="" field="LANDS_CODE"/>
+        <constraint desc="" exp="" field="DATE_EDIT"/>
+        <constraint desc="" exp="" field="GIS_NOTES"/>
+      </constraintExpressions>
+      <attributeactions>
+        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+      </attributeactions>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
+      <editform></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable/>
+      <labelOnTop/>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <expressionfields/>
+      <previewExpression></previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer minScale="1e+8" readOnly="0" maxScale="0" refreshOnNotifyEnabled="0" geometry="Point" simplifyDrawingTol="1" refreshOnNotifyMessage="" simplifyMaxScale="1" autoRefreshTime="0" simplifyDrawingHints="1" autoRefreshEnabled="0" labelsEnabled="0" simplifyAlgorithm="0" simplifyLocal="1" type="vector" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>-164.40426416555274614</xmin>
+        <ymin>17.7373708482773722</ymin>
+        <xmax>-64.62221751421913041</xmax>
+        <ymax>68.00410240949875629</ymax>
+      </extent>
+      <id>output_0ab6daaa_5fbc_49dc_81be_ec0a714c5124</id>
+      <datasource>memory?geometry=Point&amp;crs=EPSG:4269&amp;field=GIS_LOC_ID:string(128,0)&amp;field=UNIT_CODE:string(10,0)&amp;field=GROUP_CODE:string(10,0)&amp;field=UNIT_NAME:string(254,0)&amp;field=UNIT_TYPE:string(254,0)&amp;field=META_MIDF:string(128,0)&amp;field=LANDS_CODE:string(20,0)&amp;field=DATE_EDIT:date(10,0)&amp;field=GIS_NOTES:string(254,0)</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>Centroids</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +no_defs</proj4>
+          <srsid>3401</srsid>
+          <srid>4269</srid>
+          <authid>EPSG:4269</authid>
+          <description>NAD83</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <provider encoding="UTF-8">memory</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <renderer-v2 enableorderby="0" forceraster="0" type="singleSymbol" symbollevels="0">
+        <symbols>
+          <symbol name="0" clip_to_extent="1" alpha="1" type="marker">
+            <layer class="SimpleMarker" enabled="1" locked="0" pass="0">
+              <prop v="0" k="angle"/>
+              <prop v="55,228,174,255" k="color"/>
+              <prop v="1" k="horizontal_anchor_point"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="circle" k="name"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="35,35,35,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0" k="outline_width"/>
+              <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="diameter" k="scale_method"/>
+              <prop v="2" k="size"/>
+              <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
+              <prop v="MM" k="size_unit"/>
+              <prop v="1" k="vertical_anchor_point"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option value="" name="name" type="QString"/>
+                  <Option name="properties"/>
+                  <Option value="collection" name="type" type="QString"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties/>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <fieldConfiguration>
+        <field name="GIS_LOC_ID">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="UNIT_CODE">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="GROUP_CODE">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="UNIT_NAME">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="UNIT_TYPE">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="META_MIDF">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="LANDS_CODE">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="DATE_EDIT">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="GIS_NOTES">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" name="" field="GIS_LOC_ID"/>
+        <alias index="1" name="" field="UNIT_CODE"/>
+        <alias index="2" name="" field="GROUP_CODE"/>
+        <alias index="3" name="" field="UNIT_NAME"/>
+        <alias index="4" name="" field="UNIT_TYPE"/>
+        <alias index="5" name="" field="META_MIDF"/>
+        <alias index="6" name="" field="LANDS_CODE"/>
+        <alias index="7" name="" field="DATE_EDIT"/>
+        <alias index="8" name="" field="GIS_NOTES"/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default applyOnUpdate="0" expression="" field="GIS_LOC_ID"/>
+        <default applyOnUpdate="0" expression="" field="UNIT_CODE"/>
+        <default applyOnUpdate="0" expression="" field="GROUP_CODE"/>
+        <default applyOnUpdate="0" expression="" field="UNIT_NAME"/>
+        <default applyOnUpdate="0" expression="" field="UNIT_TYPE"/>
+        <default applyOnUpdate="0" expression="" field="META_MIDF"/>
+        <default applyOnUpdate="0" expression="" field="LANDS_CODE"/>
+        <default applyOnUpdate="0" expression="" field="DATE_EDIT"/>
+        <default applyOnUpdate="0" expression="" field="GIS_NOTES"/>
+      </defaults>
+      <constraints>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="GIS_LOC_ID"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="UNIT_CODE"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="GROUP_CODE"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="UNIT_NAME"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="UNIT_TYPE"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="META_MIDF"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="LANDS_CODE"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="DATE_EDIT"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="GIS_NOTES"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint desc="" exp="" field="GIS_LOC_ID"/>
+        <constraint desc="" exp="" field="UNIT_CODE"/>
+        <constraint desc="" exp="" field="GROUP_CODE"/>
+        <constraint desc="" exp="" field="UNIT_NAME"/>
+        <constraint desc="" exp="" field="UNIT_TYPE"/>
+        <constraint desc="" exp="" field="META_MIDF"/>
+        <constraint desc="" exp="" field="LANDS_CODE"/>
+        <constraint desc="" exp="" field="DATE_EDIT"/>
+        <constraint desc="" exp="" field="GIS_NOTES"/>
+      </constraintExpressions>
+      <attributeactions>
+        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+      </attributeactions>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
+      <editform></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable/>
+      <labelOnTop/>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <expressionfields/>
+      <previewExpression></previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer minScale="1e+8" readOnly="0" maxScale="0" refreshOnNotifyEnabled="0" geometry="Polygon" simplifyDrawingTol="1" refreshOnNotifyMessage="" simplifyMaxScale="1" autoRefreshTime="0" simplifyDrawingHints="1" autoRefreshEnabled="0" labelsEnabled="0" simplifyAlgorithm="0" simplifyLocal="1" type="vector" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>-170.72848129003983786</xmin>
+        <ymin>-14.28558205788383617</ymin>
+        <xmax>145.72838669750606755</xmax>
+        <ymax>68.65538485848681205</ymax>
+      </extent>
+      <id>output_59477e45_f310_49c3_a75b_e747a874302e</id>
+      <datasource>memory?geometry=MultiPolygon&amp;crs=EPSG:4269&amp;field=GIS_LOC_ID:string(128,0)&amp;field=UNIT_CODE:string(10,0)&amp;field=GROUP_CODE:string(10,0)&amp;field=UNIT_NAME:string(254,0)&amp;field=UNIT_TYPE:string(254,0)&amp;field=META_MIDF:string(128,0)&amp;field=LANDS_CODE:string(20,0)&amp;field=DATE_EDIT:date(10,0)&amp;field=GIS_NOTES:string(254,0)</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>Dissolved</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +no_defs</proj4>
+          <srsid>3401</srsid>
+          <srid>4269</srid>
+          <authid>EPSG:4269</authid>
+          <description>NAD83</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <provider encoding="UTF-8">memory</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <renderer-v2 enableorderby="0" forceraster="0" type="singleSymbol" symbollevels="0">
+        <symbols>
+          <symbol name="0" clip_to_extent="1" alpha="1" type="fill">
+            <layer class="SimpleFill" enabled="1" locked="0" pass="0">
+              <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
+              <prop v="112,94,166,255" k="color"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="35,35,35,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0.26" k="outline_width"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="solid" k="style"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option value="" name="name" type="QString"/>
+                  <Option name="properties"/>
+                  <Option value="collection" name="type" type="QString"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties/>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <fieldConfiguration>
+        <field name="GIS_LOC_ID">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="UNIT_CODE">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="GROUP_CODE">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="UNIT_NAME">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="UNIT_TYPE">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="META_MIDF">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="LANDS_CODE">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="DATE_EDIT">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="GIS_NOTES">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" name="" field="GIS_LOC_ID"/>
+        <alias index="1" name="" field="UNIT_CODE"/>
+        <alias index="2" name="" field="GROUP_CODE"/>
+        <alias index="3" name="" field="UNIT_NAME"/>
+        <alias index="4" name="" field="UNIT_TYPE"/>
+        <alias index="5" name="" field="META_MIDF"/>
+        <alias index="6" name="" field="LANDS_CODE"/>
+        <alias index="7" name="" field="DATE_EDIT"/>
+        <alias index="8" name="" field="GIS_NOTES"/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default applyOnUpdate="0" expression="" field="GIS_LOC_ID"/>
+        <default applyOnUpdate="0" expression="" field="UNIT_CODE"/>
+        <default applyOnUpdate="0" expression="" field="GROUP_CODE"/>
+        <default applyOnUpdate="0" expression="" field="UNIT_NAME"/>
+        <default applyOnUpdate="0" expression="" field="UNIT_TYPE"/>
+        <default applyOnUpdate="0" expression="" field="META_MIDF"/>
+        <default applyOnUpdate="0" expression="" field="LANDS_CODE"/>
+        <default applyOnUpdate="0" expression="" field="DATE_EDIT"/>
+        <default applyOnUpdate="0" expression="" field="GIS_NOTES"/>
+      </defaults>
+      <constraints>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="GIS_LOC_ID"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="UNIT_CODE"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="GROUP_CODE"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="UNIT_NAME"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="UNIT_TYPE"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="META_MIDF"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="LANDS_CODE"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="DATE_EDIT"/>
+        <constraint constraints="0" unique_strength="0" notnull_strength="0" exp_strength="0" field="GIS_NOTES"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint desc="" exp="" field="GIS_LOC_ID"/>
+        <constraint desc="" exp="" field="UNIT_CODE"/>
+        <constraint desc="" exp="" field="GROUP_CODE"/>
+        <constraint desc="" exp="" field="UNIT_NAME"/>
+        <constraint desc="" exp="" field="UNIT_TYPE"/>
+        <constraint desc="" exp="" field="META_MIDF"/>
+        <constraint desc="" exp="" field="LANDS_CODE"/>
+        <constraint desc="" exp="" field="DATE_EDIT"/>
+        <constraint desc="" exp="" field="GIS_NOTES"/>
+      </constraintExpressions>
+      <attributeactions>
+        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+      </attributeactions>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
+      <editform></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable/>
+      <labelOnTop/>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <expressionfields/>
+      <previewExpression></previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+  </projectlayers>
+  <layerorder>
+    <layer id="cb_2016_us_state_20m_a3a3575a_e2b8_45cb_98b7_7760924f4f36"/>
+    <layer id="nps_boundary_13f67a1c_7c4a_40bc_a59f_489537ad915e"/>
+    <layer id="output_59477e45_f310_49c3_a75b_e747a874302e"/>
+    <layer id="output_0ab6daaa_5fbc_49dc_81be_ec0a714c5124"/>
+    <layer id="nps_centroids_c6e91138_dd75_4a72_bd0e_643a483f4a8e"/>
+    <layer id="ogr_dbname___home_chd_Dropbox_national_parks_voronoi_nps_voronoi_gpkg__table__voronoi___geom__sql__80db4914_33ee_423c_bd72_ef1dd9aff30b"/>
+  </layerorder>
+  <properties>
+    <WFSTLayers>
+      <Insert type="QStringList"/>
+      <Update type="QStringList"/>
+      <Delete type="QStringList"/>
+    </WFSTLayers>
+    <WMSContactOrganization type="QString"></WMSContactOrganization>
+    <WMSContactPhone type="QString"></WMSContactPhone>
+    <Macros>
+      <pythonCode type="QString"></pythonCode>
+    </Macros>
+    <WMSAccessConstraints type="QString">None</WMSAccessConstraints>
+    <Legend>
+      <filterByMap type="bool">false</filterByMap>
+    </Legend>
+    <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
+    <WCSUrl type="QString"></WCSUrl>
+    <WMSOnlineResource type="QString"></WMSOnlineResource>
+    <WMSContactPosition type="QString"></WMSContactPosition>
+    <WFSUrl type="QString"></WFSUrl>
+    <WMSServiceAbstract type="QString"></WMSServiceAbstract>
+    <WMSContactPerson type="QString"></WMSContactPerson>
+    <WMSKeywordList type="QStringList">
+      <value></value>
+    </WMSKeywordList>
+    <WMSPrecision type="QString">8</WMSPrecision>
+    <WMSUrl type="QString"></WMSUrl>
+    <Gui>
+      <CanvasColorGreenPart type="int">255</CanvasColorGreenPart>
+      <SelectionColorAlphaPart type="int">255</SelectionColorAlphaPart>
+      <SelectionColorRedPart type="int">255</SelectionColorRedPart>
+      <CanvasColorBluePart type="int">255</CanvasColorBluePart>
+      <CanvasColorRedPart type="int">255</CanvasColorRedPart>
+      <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
+      <SelectionColorBluePart type="int">0</SelectionColorBluePart>
+    </Gui>
+    <DefaultStyles>
+      <Marker type="QString"></Marker>
+      <ColorRamp type="QString"></ColorRamp>
+      <Line type="QString"></Line>
+      <Opacity type="double">1</Opacity>
+      <Fill type="QString"></Fill>
+      <RandomColors type="bool">true</RandomColors>
+    </DefaultStyles>
+    <WFSLayers type="QStringList"/>
+    <WMSFees type="QString">conditions unknown</WMSFees>
+    <Identify>
+      <disabledLayers type="QStringList"/>
+    </Identify>
+    <WMSImageQuality type="int">90</WMSImageQuality>
+    <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
+    <SpatialRefSys>
+      <ProjectionsEnabled type="int">1</ProjectionsEnabled>
+    </SpatialRefSys>
+    <PositionPrecision>
+      <DecimalPlaces type="int">2</DecimalPlaces>
+      <Automatic type="bool">true</Automatic>
+      <DegreeFormat type="QString">MU</DegreeFormat>
+    </PositionPrecision>
+    <Paths>
+      <Absolute type="bool">false</Absolute>
+    </Paths>
+    <WMSContactMail type="QString"></WMSContactMail>
+    <WCSLayers type="QStringList"/>
+    <Measurement>
+      <AreaUnits type="QString">m2</AreaUnits>
+      <DistanceUnits type="QString">meters</DistanceUnits>
+    </Measurement>
+    <PAL>
+      <CandidatesPolygon type="int">30</CandidatesPolygon>
+      <ShowingAllLabels type="bool">false</ShowingAllLabels>
+      <ShowingPartialsLabels type="bool">true</ShowingPartialsLabels>
+      <ShowingCandidates type="bool">false</ShowingCandidates>
+      <DrawRectOnly type="bool">false</DrawRectOnly>
+      <DrawOutlineLabels type="bool">true</DrawOutlineLabels>
+      <SearchMethod type="int">0</SearchMethod>
+      <CandidatesPoint type="int">16</CandidatesPoint>
+      <CandidatesLine type="int">50</CandidatesLine>
+    </PAL>
+    <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
+    <WMSRequestDefinedDataSources type="bool">false</WMSRequestDefinedDataSources>
+    <WMSSegmentizeFeatureInfoGeometry type="bool">false</WMSSegmentizeFeatureInfoGeometry>
+    <WMSServiceTitle type="QString"></WMSServiceTitle>
+    <Measure>
+      <Ellipsoid type="QString">WGS84</Ellipsoid>
+    </Measure>
+  </properties>
+  <visibility-presets/>
+  <transformContext/>
+  <Annotations/>
+  <Layouts/>
+</qgis>
