@@ -1,5 +1,6 @@
 var width = 1024,
-    height = 768;
+    height = 768,
+    zoomed = false;
 
 var svg = d3.select('#map')
     .append('svg')
@@ -16,8 +17,25 @@ var label = d3.select('#map').append('div')
     .attr('class', 'tooltip')
     .style('opacity', 0);
 
+var coords = d => projection(d.geometry.coordinates);
+
 function zoom(d) {
     console.log(d);
+    console.log(coords(d));
+    var x, y, k;
+    if (zoomed) {
+        x = width / 2;
+        y = height / 2;
+        k = 1;
+        zoomed = false;
+    } else {
+        x = coords(d)[0];
+        y = coords(d)[1];
+        k = 2;
+        zoomed = true;
+    }
+
+    svg.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")");
 }
 
 d3.json('nps_voronoi.geojson').then(data => {
@@ -66,10 +84,10 @@ d3.json('nps_voronoi.geojson').then(data => {
             .enter()
             .append('line')
             .attr('class', 'label')
-            .attr('x1', d => coordX(d))
-            .attr('y1', d => coordY(d))
+            .attr('x1', d => coords(d)[0])
+            .attr('y1', d => coords(d)[1])
             .attr('x2', labelOffsetX - 10)
-            .attr('y2', d => coordY(d))
+            .attr('y2', d => coords(d)[1])
             .on('click', d => zoom(d));
 
         var circle = svg.selectAll('circle')
@@ -78,8 +96,8 @@ d3.json('nps_voronoi.geojson').then(data => {
             .append('circle')
             .style('opacity', 0)
             .style('cursor', 'pointer')
-            .attr('cx', d => coordX(d))
-            .attr('cy', d => coordY(d))
+            .attr('cx', d => coords(d)[0])
+            .attr('cy', d => coords(d)[1])
             .attr('r', 10)
             .on('click', d => zoom(d));
     });
