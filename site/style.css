@@ -5,6 +5,7 @@ body {
 .polygon {
     stroke: #000;
     stroke-width: 1px;
+    vector-effect: non-scaling-stroke;
 }
 
 .tooltip {
@@ -20,8 +21,6 @@ body {
 .label {
     stroke-width: 1px;
     stroke: #d3d3d3;
-    cursor: pointer;
-
 }
 
 .label-text {

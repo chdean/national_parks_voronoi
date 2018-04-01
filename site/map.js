@@ -7,6 +7,8 @@ var svg = d3.select('#map')
     .attr('width', width)
     .attr('height',height);
 
+var g = svg.append('g');
+
 var projection = d3.geoAlbersUsa();
 
 var path = d3.geoPath().projection(projection);
@@ -19,33 +21,48 @@ var label = d3.select('#map').append('div')
 
 var coords = d => projection(d.geometry.coordinates);
 
-function zoom(d) {
+function zoomIn(d) {
     console.log(d);
     console.log(coords(d));
     var x, y, k;
     if (zoomed) {
-        x = width / 2;
-        y = height / 2;
-        k = 1;
-        zoomed = false;
+        return zoomOut();
     } else {
         x = coords(d)[0];
         y = coords(d)[1];
-        k = 2;
+        k = 80;
         zoomed = true;
-    }
 
-    svg.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")");
+        return zoom(x, y, k);
+    }
 }
 
+function zoomOut() {
+    if (zoomed) {
+        var x = width / 2,
+            y = height / 2,
+            k = 1;
+        zoomed = false;
+        return zoom(x, y, k);
+    }
+}
+
+function zoom(x, y, k) {
+    g.transition()
+        .duration(1000)
+        .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")");
+}
+
+
 d3.json('nps_voronoi.geojson').then(data => {
-    svg.selectAll('path')
+    g.selectAll('path')
         .data(data.features)
         .enter()
         .append('path')
         .attr('class', 'polygon')
         .attr('fill', d => colorScheme[d.properties.color_id])
         .attr('d', path)
+        .on('click', () => zoomOut())
         .on('mouseover', d => {
             label.transition()
                 .duration(200)
@@ -69,7 +86,7 @@ d3.json('nps_voronoi.geojson').then(data => {
         var coordX = d => projection(d.geometry.coordinates)[0];
         var coordY = d => projection(d.geometry.coordinates)[1];
 
-        var text = svg.selectAll('text')
+        var text = g.selectAll('text')
             .data(cities)
             .enter()
             .append('text')
@@ -77,28 +94,28 @@ d3.json('nps_voronoi.geojson').then(data => {
             .text(d => d.properties.name)
             .attr('x', labelOffsetX)
             .attr('y', d => coordY(d) + 5)
-            .on('click', d => zoom(d));
+            .on('click', d => zoomIn(d));
 
-        var line = svg.selectAll('line')
+        var line = g.selectAll('line')
             .data(cities)
             .enter()
             .append('line')
             .attr('class', 'label')
-            .attr('x1', d => coords(d)[0])
+            .attr('x1', d => coords(d)[0] * 1.01)
             .attr('y1', d => coords(d)[1])
             .attr('x2', labelOffsetX - 10)
             .attr('y2', d => coords(d)[1])
-            .on('click', d => zoom(d));
+            .on('click', d => zoomIn(d));
 
-        var circle = svg.selectAll('circle')
-            .data(cities)
-            .enter()
-            .append('circle')
-            .style('opacity', 0)
-            .style('cursor', 'pointer')
-            .attr('cx', d => coords(d)[0])
-            .attr('cy', d => coords(d)[1])
-            .attr('r', 10)
-            .on('click', d => zoom(d));
+        // var circle = g.selectAll('circle')
+        //     .data(cities)
+        //     .enter()
+        //     .append('circle')
+        //     .style('opacity', 0)
+        //     .style('cursor', 'pointer')
+        //     .attr('cx', d => coords(d)[0])
+        //     .attr('cy', d => coords(d)[1])
+        //     .attr('r', 10)
+        //     .on('click', d => zoom(d));
     });
 });
