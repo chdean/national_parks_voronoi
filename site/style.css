@@ -1,5 +1,5 @@
 body {
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .polygon {
@@ -14,8 +14,8 @@ body {
     padding: 2px;
     text-shadow: 0 0 4px white;
     pointer-events: none;
-    font: 12px sans-serif;
     background-color: #fff;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .label {
@@ -29,9 +29,21 @@ body {
     cursor: pointer;
 }
 
-.header {
+#header {
     width: 100%;
     text-align: center;
+    font-family: 'IBM Plex Serif', serif;
+}
+
+h1 {
+    letter-spacing: 3px;
+    font-size: 48px;
+    margin-bottom: 0px;
+}
+
+.subtitle {
+    font-style: italic;
+    margin-top: 3px;
 }
 
 svg {
@@ -39,6 +51,3 @@ svg {
     margin: auto;
 }
 
-.column-left{ float: left; width: 33%; }
-.column-right{ float: right; width: 33%; }
-.column-center{ display: inline-block; width: 33%; }
